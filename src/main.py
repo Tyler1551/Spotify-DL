@@ -105,10 +105,10 @@ def downloadVideos(VideoIDList):
 
         validatedTitle = validateTitle(fileName)
 
-        yt.download(output_path='Files/', filename=validatedTitle + '.mp4')
+        yt.download(output_path='out/Files', filename=validatedTitle + '.mp4')
 
-        mp4VideoTitle = './Files/' + validatedTitle + '.mp4'
-        mp3TrackTitle = './Files/' + validatedTitle + '.mp3'
+        mp4VideoTitle = './out/Files/' + validatedTitle + '.mp4'
+        mp3TrackTitle = './out/Files/' + validatedTitle + '.mp3'
 
         videoclip = VideoFileClip(mp4VideoTitle)
         
