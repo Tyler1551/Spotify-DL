@@ -1,5 +1,5 @@
 # Spotify-DL
-This application allows for users to mass download mp3 files using a spotify playlist link using Python.
+This application allows for users to mass download mp3 files using a spotify playlist link using Python, Spotify and YouTube API's.
 
 ## Installation
 To install the application simply clone this repo with `git clone https://github.com/Tyler1551/Spotify-DL.git`  
