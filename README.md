@@ -16,4 +16,6 @@ Before running the program you will need to set up a file called "credentials.js
 }
 ```
 
-Next we will run the program with `py main.py` in your terminal of choice and simply enter the link to your Spotify playlist. This will go through each of the tracks in the playlist and save them as .mp3 files under `./Files`
+To run the application use `py src/main.py`  
+This will go through each of the tracks in the playlist and save them as .mp3 files under  
+`./out/Files/`
