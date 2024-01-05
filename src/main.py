@@ -36,12 +36,10 @@ def getSpotifyAuth():
     return accessToken
 
 TrackTitleList = []
-
-VideoIDList = ["BZBKi2AyhaY", "RjYZToXuJaM", "pK7egZaT3hs", "fTH71AAxXmM", "a_426RiwST8", "fHiGbolFFGw", "okJDFx3YW6Y", "s88r_q7oufE", "VQH8ZTgna3Q", "EqkBRVukQmE"]
-# VideoIDList = []
-accessToken = getSpotifyAuth()
+VideoIDList = []
 
 # Set headers to send Spotify Auth token
+accessToken = getSpotifyAuth()
 headers = {
     'Authorization' : 'Bearer {token}'.format(token=accessToken)
 }
@@ -66,7 +64,6 @@ def getPlaylist(playlist_id, accessToken):
 
     ID_List = []
     
-
     for i in range(total_tracks):
         track_id = rJson['tracks']['items'][i]['track']['id']
         ID_List.append(track_id)
@@ -79,8 +76,6 @@ def getPlaylist(playlist_id, accessToken):
 
         trackID = results['items'][0]['id']['videoId']
         VideoIDList.append(trackID)
-    
-# ===== YOUTUBE FUNCTIONS =====
 
 # Search Youtube for track name for use in getPlaylist
 def getTrack(trackName, youtube_access_token):
@@ -96,13 +91,9 @@ def downloadVideos(VideoIDList):
         
         yt = YouTube(link).streams.first()
         authorName = YouTube(link).author
-
         print("Downloading", idx+1, "/", len(VideoIDList), " -", yt.title)
 
-        print(authorName)
-
         fileName = authorName + ' - ' + yt.title
-
         validatedTitle = validateTitle(fileName)
 
         yt.download(output_path='out/Files', filename=validatedTitle + '.mp4')
@@ -127,7 +118,5 @@ def validateTitle(yt_title):
     print(yt_title)
     return yt_title 
 
-# Add this in when quota resets
-    # getPlaylist(playlist_id, accessToken)
-
+getPlaylist(playlist_id, accessToken)
 downloadVideos(VideoIDList)
