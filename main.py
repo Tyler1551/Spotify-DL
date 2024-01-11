@@ -1,5 +1,5 @@
-import spotify as sp
-import download as dl
+from src import spotify as sp
+from src import download as dl
 
 # Set headers to send Spotify Auth token
 accessToken = sp.getAuth()
