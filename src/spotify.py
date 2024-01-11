@@ -2,7 +2,6 @@ import youtube as yt
 
 import requests
 import json
-import os
 
 with open('credentials.json') as f:
     contents = json.load(f)
