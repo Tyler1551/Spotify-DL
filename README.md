@@ -10,12 +10,12 @@ Next, install dependencies with `pip install -r requirements.txt`
 Before running the program you will need to set up a file called "credentials.json" this will be used to store Spotify and YouTube API credentials. The file should be formatted as follows:  
 ```
 {
-    "spotify_client_ID":"Your Spotify-Client-ID",
-    "spotify_client_secret":"Your-Spotify-Client-Secret",
-    "youtube_key":"Your-YouTube-API-Key"
+    "spotify_client_ID":"YOUR-SPOTIFY-API-CLIENT-ID",
+    "spotify_client_secret":"YOUR-SPOTIFY-CLIENT-SECRET",
+    "youtube_key":"YOUR-YOUTUBE-API-KEY"
 }
 ```
 
-To run the application use `py src/main.py`  
+To run the application use `python main.py`  
 This will go through each of the tracks in the playlist and save them as .mp3 files under  
-`./out/Files/`
+`./out/files/`
