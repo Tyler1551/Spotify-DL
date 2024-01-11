@@ -21,7 +21,7 @@ def downloadVideos(VideoIDList):
         fileName = authorName + ' - ' + yt.title
         validatedTitle = validateTitle(fileName)
 
-        yt.download(output_path='out/files', filename=validatedTitle + '.mp4')
+        yt.download(output_path='./out/files', filename=validatedTitle + '.mp4')
 
         mp4VideoTitle = './out/files/' + validatedTitle + '.mp4'
         mp3TrackTitle = './out/files/' + validatedTitle + '.mp3'
