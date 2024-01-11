@@ -3,7 +3,7 @@ This application allows for users to mass download mp3 files using a spotify pla
 
 ## Installation
 To install the application simply clone this repo with `git clone https://github.com/Tyler1551/Spotify-DL.git`  
-Make sure Python3 is installed  
+Make sure Python 3 is installed  
 Next, install dependencies with `pip install -r requirements.txt`
 
 ## Usage
